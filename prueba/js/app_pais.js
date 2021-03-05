@@ -1,6 +1,3 @@
-Vue.filter('poner-coma',function(valor){
-    
-});
 
 const appPais= new Vue({
 	el:'#app_pais',
