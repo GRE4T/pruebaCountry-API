@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="libs/icofont/icofont.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body id="modeBody" class="bg-section">
+		<main id="app">
+			<div :class="modeDark">
+				<header class="header bg-white">
+					<nav class="navbar navbar-light">
+					  <div class="container d-flex justify-content-between">
+					    <a class="navbar-brand fw-bold text-question" href="index.html">Where in the world?</a>
+						<div class="form-check form-switch">
+						  <input class="form-check-input" type="checkbox" id="switch" v-model="mode" @change="modo()">
+						  <label class="form-check-label" for="switch"><i class="icofont-moon"></i> Dark Mode</label>
+						</div>
+					  </div>
+					</nav>
+				</header>
+				<section  class="container bg-section">
+					<nav class="navbar mt-4">
+					    <form class="row d-flex justify-content-between w-100 px-4">
+					    	<div class="col-12 col-md-6 col-lg-4">
+					      		<input id="inputMode" class=" box-shadow border-0 px-2 px-md-4 py-2 form-control" type="search" placeholder="Search" v-model="buscar" aria-label="Search">
+					    	</div>
+					    	<div class="col-12 col-md-4  col-lg-2 mt-4 mt-md-0">
+								<select id="selectMode" class="box-shadow border-0 px-2 py-2 form-control" v-model="buscarRegion"  aria-label="Default select example">
+								  <option value="">Filter by Region</option>
+								  <option value="asia">Asia</option>
+								  <option value="africa">África</option>
+								  <option value="america">América</option>
+								  <option value="europe">Europe</option>
+								  <option value="ocenia">Oceania</option>
+								</select>		
+					    	</div>
+
+					    </form>
+					</nav>
+					<div class="my-5">
+						<div class="row d-flex justify-content-around flex-wrap">
+							<div v-for="item in filtrarPais" class="card p-0  m-3  box-shadow " style="width: 14rem;">
+							  <a :href="'detail_pais.html?pais='+item.name"><img :src="item.flag" class="card-img-top" :alt="item.name"></a>
+							  <div class="card-body">
+							    <h5 class="card-title h6">{{item.name}}</h5>
+							    <p class="card-text mb-1"><small><span class="fw-bold">Population: </span>{{item.population}}</small></p>
+							    <p class="card-text mb-1"><small><span class="fw-bold">Region: </span>{{item.region}}</small></p>
+							    <p class="card-text mb-1"><small><span class="fw-bold">Capital: </span>{{item.capital}}</small></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer>
+					
+				</footer>				
+			</div>
+		</main>
+		<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="libs/vue/vue.js"></script>
+		<script type="text/javascript" src="libs/vue/vue-resource.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>

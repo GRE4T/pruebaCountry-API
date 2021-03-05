@@ -1,0 +1,68 @@
+.bg-section{
+	background-color: #FAFAFA;
+}
+.header{
+	box-shadow: 0px 3px #F6F6F6;
+}
+.box-shadow{
+	box-shadow:1px 1px 1px 2px #F6F6F6;
+}
+.btn_back{
+	border-color: #F6F6F6;
+	box-shadow:0 0 0 0.15rem #f6f6f6;
+	color:black;
+}
+.btn-success:hover{
+	color: black
+}
+.btn:focus{
+	box-shadow:none ;
+}
+.form-control:focus{
+	background-color: transparent !important;
+	box-shadow:none;
+
+}
+/*------------------------------------DARK---------------------------------------*/
+.bg-section-dark{
+	background-color: #202D36 !important;
+}
+.active-mode .header{
+	box-shadow: 0px 3px #202D36;
+}
+.active-mode .header nav{
+	background: #2B3743;
+	box-shadow: 0px 3px #2B3743 !important ;
+}
+.active-mode .bg-section{
+	background-color: #202D36 !important;
+}
+.active-mode .card{
+	background: #2B3743;
+}
+.active-mode input, .bg-section-dark select, .bg-section-dark option{
+	color: white;
+	background-color: #2B3743;
+}
+
+.active-mode input::placeholder {
+ 	color: white; 
+}
+
+.active-mode .form-control:focus{
+	color: white !important;
+}
+.active-mode .box-shadow{
+	box-shadow:1px 1px 1px 2px #2B3743;
+	border:none;
+}
+.active-mode .btn_back, .active-mode .btn_borders{
+	border-color: #2B3743 !important;
+	color: white;
+	box-shadow:0 0 0 0.15rem rgb(43 55 67 / 50%);
+
+	background: #2B3743 !important;
+}
+.active-mode .navbar-light .navbar-brand {
+	color: white;
+}
